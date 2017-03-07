@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "removeComments": false,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "forkChecker": true
+  },
+  "typeRoots": [
+    "node_modules/@types"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "bin",
+    "obj",
+    "Properties",
+    "html-report",
+    "reports",    
+    "dll"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
+}

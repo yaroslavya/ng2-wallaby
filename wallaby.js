@@ -5,17 +5,17 @@ const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
 
 var webpackPostprocessor = wallabyWebpack({
     entryPatterns: [
-        'test/vendor.ts',
+        'test/vendor.js',
         'test/unit/simple.test.js'
     ],
 
     module: {
         loaders: [
             // if you use templateUrl in your components and want to inline your templates uncomment the below line
-            //{test: /\.js$/, loader: 'angular2-template-loader', exclude: /node_modules/},
+            {test: /\.js$/, loader: 'angular2-template-loader', exclude: /node_modules/},
 
             // if importing .scss files in your component styleUrls uncomment the following line
-            //{ test: /\.scss$/, loaders: ['raw-loader', 'sass-loader'] },
+            { test: /\.scss$/, loaders: ['raw-loader', 'sass-loader'] },
             { test: /\.css$/, loader: 'raw-loader'},
             { test: /\.json$/, loader: 'json-loader'},
             { test: /\.html$/, loader: 'raw-loader'},
@@ -40,6 +40,7 @@ module.exports = function () {
             {pattern: 'test/karma-require.js', load: false},
             {pattern: 'src/**/*.ts', load: false},
             {pattern: 'src/**/*.css', load: false},
+            {pattern: 'src/**/*.scss', load: false},
             {pattern: 'src/**/*.html', load: false},
             {pattern: 'src/**/*.json', load: false},
             {pattern: 'src/app/**/*.ts', ignore: true},
